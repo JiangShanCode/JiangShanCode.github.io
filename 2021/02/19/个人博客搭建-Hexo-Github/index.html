@@ -438,28 +438,27 @@
 
 
 
+
+
   
-	<div id="gitalk-container" style="margin: 0 30px !important;"></div>
-	<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-	<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script> -->
-	<link rel="stylesheet" href="/lib/gitalk.css">
-    <script src="/lib/gitalk.min.js"></script>
+	<div id="valine-container" style="margin: 0 30px !important; background-color: #fff;" ></div>
+	<!--Leancloud 操作库:-->
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <!--Valine 的核心代码库-->
+    <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
 	<script>
-		<!-- id: "个人博客搭建 - Hexo+Github" -->
-		var gitalk = new Gitalk({
-			clientID: '74870bdf414b23afbac9',
-			clientSecret: '771b1e7d53864715419e9adc5904c0062f5f1f6f',
-			repo: 'BlogComments',
-			owner: 'JiangShanCode',
-			admin: 'JiangShanCode',
-			id: 'Fri Feb 19 2021 01:23:16 GMT+0800',
-			proxy: 'https://netnr-proxy.cloudno.de/https://github.com/login/oauth/access_token',
-			distractionFreeMode: 'true'
-		})
-		gitalk.render('gitalk-container') 
+		var notify = 'true' == true ? true : false;
+        var verify = 'true' == true ? true : false;
+        new Valine({
+            av: AV,
+            el: '#valine-container',
+            emoticon_url: 'https://cloud.panjunwen.com/alu',
+            emoticon_list: ["狂汗.png","不说话.png","汗.png","坐等.png","献花.png","不高兴.png","中刀.png","害羞.png","皱眉.png","小眼睛.png","暗地观察.png"],
+            app_id: 'Syt4D2WNGDoanRDjFItYm7zm-MdYXbMMI',
+            app_key: '7Vpz2nYCUjecmNGnpVnGrbyY',
+            placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!'
+            });
 	</script>
-
-
 
 
 
